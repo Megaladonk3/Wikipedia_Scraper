@@ -75,7 +75,7 @@ def get_data(query, output_file):
             if "Wikipedia does not have an article with this exact name." not in str(response.text) and "Bad title" not in str(response.text):
                 # Open a CSV file for writing
                 with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
-                    csv_writer = csv.writer(csvfile, delimiter = '->') #the separator between fields
+                    csv_writer = csv.writer(csvfile, delimiter = '>') #the separator between fields
 
                     # Write headers to the CSV file
                     csv_writer.writerow(['Heading', 'Paragraph'])
